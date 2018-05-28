@@ -54,14 +54,46 @@
 		95E824C520BC2029007E8F76 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				95E824C620BC2029007E8F76 /* AppDelegate.swift */,
-				95E824C820BC2029007E8F76 /* ViewController.swift */,
-				95E824CA20BC2029007E8F76 /* Main.storyboard */,
-				95E824CD20BC2029007E8F76 /* Assets.xcassets */,
-				95E824CF20BC2029007E8F76 /* LaunchScreen.storyboard */,
+				95E824DC20BC2873007E8F76 /* Model */,
+				95E824DD20BC287B007E8F76 /* View */,
+				95E824DE20BC2884007E8F76 /* Controller */,
 				95E824D220BC2029007E8F76 /* Info.plist */,
+				95E824CD20BC2029007E8F76 /* Assets.xcassets */,
+				95E824C620BC2029007E8F76 /* AppDelegate.swift */,
+				95E824DB20BC2867007E8F76 /* Storyboard */,
 			);
 			path = Quiz;
+			sourceTree = "<group>";
+		};
+		95E824DB20BC2867007E8F76 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				95E824CA20BC2029007E8F76 /* Main.storyboard */,
+				95E824CF20BC2029007E8F76 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		95E824DC20BC2873007E8F76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95E824DD20BC287B007E8F76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95E824DE20BC2884007E8F76 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95E824C820BC2029007E8F76 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
