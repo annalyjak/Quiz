@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WrocQuiz-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Breslau-Panorama-Foto-ravjitwanderer" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-Xd-lwY">
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Breslau-Panorama-Foto-ravjitwanderer" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-Xd-lwY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,19 +52,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DgX-73-ehs"/>
+                    <navigationItem key="navigationItem" title="WrocQuiz" id="DgX-73-ehs"/>
                     <connections>
-                        <segue destination="Ka7-nb-rCJ" kind="show" id="PeV-Di-iDj"/>
+                        <segue destination="Ka7-nb-rCJ" kind="show" identifier="showInformation" id="PeV-Di-iDj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="670" y="29"/>
         </scene>
-        <!--View Controller-->
+        <!--Information View Controller-->
         <scene sceneID="NQv-9f-3dM">
             <objects>
-                <viewController id="Ka7-nb-rCJ" sceneMemberID="viewController">
+                <viewController id="Ka7-nb-rCJ" customClass="InformationViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rd7-7M-aNQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Npq-RT-kKL">
                                 <rect key="frame" x="5" y="69" width="404" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tng-Qp-Tti">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tng-Qp-Tti">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="667"/>
                                     </imageView>
                                 </subviews>
@@ -90,6 +90,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o04-hP-M0l"/>
                     </view>
+                    <connections>
+                        <outlet property="imageInformation" destination="tng-Qp-Tti" id="aPT-Iw-CBJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MhN-23-mFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
