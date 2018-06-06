@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var informations: [Information] = [Information(), Information(), Information()]
+    @IBOutlet var startLessonsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +24,20 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showInformation" {
-            let destinationController = segue.destination as! InformationViewController
-            destinationController.information = informations[1]
-        }
+        //if segue.identifier == "showInformation" {
+          //  let destinationController = segue.destination as! InformationViewController
+           // destinationController.information = informations[1]
+        //}
     }
+    
+    @IBAction func startLessonsButtonTapped(sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Lessons", bundle: nil)
+        if let walkthroughViewController = storyBoard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
+            present(walkthroughViewController, animated: true, completion: nil)
+        }
+        //        dismiss(animated: true, completion: nil)
+    }
+    
 
 
 }

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="q5N-XV-pmx">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jx8-6K-klG" customClass="WalkthroughPageViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n70-2y-a7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302" y="172"/>
+        </scene>
+        <!--Walkthrough Content View Controller-->
+        <scene sceneID="i8s-Md-fFd">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughContentViewController" id="Vav-nG-ZAT" customClass="WalkthroughContentViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rdU-6D-nts">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="560"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hdi-aq-5vI">
+                                <rect key="frame" x="10" y="30" width="355" height="500"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-Rl-TKh">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="366"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bEQ-Rl-TKh" secondAttribute="height" multiplier="355:366" id="cTw-KP-byM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fcR-Ls-Tvw">
+                                        <rect key="frame" x="0.0" y="371" width="355" height="129"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hdi-aq-5vI" firstAttribute="top" secondItem="3bC-rY-b4N" secondAttribute="top" constant="10" id="Odh-zC-vht"/>
+                            <constraint firstItem="3bC-rY-b4N" firstAttribute="trailing" secondItem="hdi-aq-5vI" secondAttribute="trailing" constant="10" id="Qmp-Xe-kIS"/>
+                            <constraint firstItem="hdi-aq-5vI" firstAttribute="leading" secondItem="3bC-rY-b4N" secondAttribute="leading" constant="10" id="YGL-9f-naS"/>
+                            <constraint firstItem="hdi-aq-5vI" firstAttribute="centerX" secondItem="rdU-6D-nts" secondAttribute="centerX" id="dpv-1N-4kq"/>
+                            <constraint firstItem="hdi-aq-5vI" firstAttribute="centerY" secondItem="rdU-6D-nts" secondAttribute="centerY" id="uNg-Po-Jlg"/>
+                            <constraint firstItem="3bC-rY-b4N" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hdi-aq-5vI" secondAttribute="bottom" constant="10" id="xBO-qZ-k2P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3bC-rY-b4N"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="560"/>
+                    <connections>
+                        <outlet property="contentImageView" destination="bEQ-Rl-TKh" id="TDG-h7-Z8m"/>
+                        <outlet property="informationTextView" destination="fcR-Ls-Tvw" id="HHk-gr-Y0V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPG-lg-fKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493.60000000000002" y="173.61319340329837"/>
+        </scene>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="4pf-Yt-CW4">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughViewController" id="wSg-OO-5Ka" customClass="WalkthroughViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t0l-fe-3Mq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGs-gM-za0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="556"/>
+                                <connections>
+                                    <segue destination="jx8-6K-klG" kind="embed" id="Gf5-97-SPP"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bg-H7-SSF">
+                                <rect key="frame" x="0.0" y="556" width="375" height="111"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="llN-wh-hmI">
+                                        <rect key="frame" x="12" y="19" width="350" height="72"/>
+                                        <subviews>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CMO-cE-E19">
+                                                <rect key="frame" x="155.5" y="0.0" width="39" height="37"/>
+                                                <color key="pageIndicatorTintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="currentPageIndicatorTintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </pageControl>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TcN-mM-NyN">
+                                                <rect key="frame" x="0.0" y="42" width="350" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZA-5m-M2q">
+                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                                        <state key="normal" title="Wstecz">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="previousButtonTappedWithSender:" destination="wSg-OO-5Ka" eventType="touchUpInside" id="3Bz-o0-iBX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9p-aw-L6z">
+                                                        <rect key="frame" x="120" y="0.0" width="110" height="30"/>
+                                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="110" id="zXo-u8-jKg"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Rozpocznij test">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="startTestButtonTappedWithSender:" destination="wSg-OO-5Ka" eventType="touchUpInside" id="wTy-0k-rfS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05x-la-9J5">
+                                                        <rect key="frame" x="240" y="0.0" width="110" height="30"/>
+                                                        <state key="normal" title="Dalej">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="nextButtonTappedWithSender:" destination="wSg-OO-5Ka" eventType="touchUpInside" id="xBD-RP-8en"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="llN-wh-hmI" firstAttribute="centerY" secondItem="5bg-H7-SSF" secondAttribute="centerY" id="L4a-Sf-iAH"/>
+                                    <constraint firstItem="llN-wh-hmI" firstAttribute="centerX" secondItem="5bg-H7-SSF" secondAttribute="centerX" id="Vsk-2a-hAK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5bg-H7-SSF" firstAttribute="height" secondItem="IGs-gM-za0" secondAttribute="height" multiplier="0.2" id="8co-ao-toY"/>
+                            <constraint firstItem="IGs-gM-za0" firstAttribute="trailing" secondItem="Zp7-Xa-xHx" secondAttribute="trailing" id="Omi-pl-eo3"/>
+                            <constraint firstItem="5bg-H7-SSF" firstAttribute="leading" secondItem="Zp7-Xa-xHx" secondAttribute="leading" id="WKD-cu-sJD"/>
+                            <constraint firstItem="IGs-gM-za0" firstAttribute="leading" secondItem="Zp7-Xa-xHx" secondAttribute="leading" id="ZZJ-Sh-EFN"/>
+                            <constraint firstItem="5bg-H7-SSF" firstAttribute="bottom" secondItem="Zp7-Xa-xHx" secondAttribute="bottom" id="f8d-Kh-5uK"/>
+                            <constraint firstItem="IGs-gM-za0" firstAttribute="top" secondItem="t0l-fe-3Mq" secondAttribute="top" id="pEK-zj-RcD"/>
+                            <constraint firstItem="5bg-H7-SSF" firstAttribute="top" secondItem="IGs-gM-za0" secondAttribute="bottom" id="zbu-Zg-Hq5"/>
+                            <constraint firstItem="5bg-H7-SSF" firstAttribute="trailing" secondItem="Zp7-Xa-xHx" secondAttribute="trailing" id="zxO-3d-94K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zp7-Xa-xHx"/>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="05x-la-9J5" id="QhA-HU-s8m"/>
+                        <outlet property="pageControl" destination="CMO-cE-E19" id="eXi-Wh-wq4"/>
+                        <outlet property="previousButton" destination="1ZA-5m-M2q" id="cRr-8D-puV"/>
+                        <outlet property="startTestButton" destination="r9p-aw-L6z" id="Sgl-TT-Sx7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snS-zK-3ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1122" y="222"/>
+        </scene>
+    </scenes>
+</document>

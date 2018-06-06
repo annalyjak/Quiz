@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 class InformationViewController: UICollectionViewController {
 
     @IBOutlet var imageInformation: UIImageView!
-    var information = Information()
+  //  var information = Information()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +24,8 @@ class InformationViewController: UICollectionViewController {
         // Register cell classes
 //        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        imageInformation.image = UIImage(named: information.image)
+        //imageInformation.image = UIImage(named: information.image)
         
-        navigationItem.largeTitleDisplayMode = .never
     }
 
     override func didReceiveMemoryWarning() {
