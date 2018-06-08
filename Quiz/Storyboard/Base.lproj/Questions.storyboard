@@ -11,18 +11,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Page View Controller-->
+        <!--Questions Page View Controller-->
         <scene sceneID="MRa-Eh-Oxf">
             <objects>
-                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zlg-Xe-xKJ" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="QuestionsPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zlg-Xe-xKJ" customClass="QuestionsPageViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZB-vZ-zVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3882" y="-13"/>
+            <point key="canvasLocation" x="-3921" y="-13"/>
         </scene>
-        <!--View Controller-->
+        <!--Questions View Controller-->
         <scene sceneID="xFg-8n-poH">
             <objects>
-                <viewController id="2Xd-4A-HoJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionsViewController" id="2Xd-4A-HoJ" customClass="QuestionsViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FOi-s5-RzX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,35 +36,45 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNc-6n-zrD">
                                 <rect key="frame" x="0.0" y="559" width="375" height="108"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BuI-uM-gQH">
-                                        <rect key="frame" x="51.5" y="39" width="272" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="osY-F5-7NT">
+                                        <rect key="frame" x="51.5" y="19" width="272" height="70"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcl-uo-p2q">
-                                                <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
-                                                <state key="normal" title="Wstecz">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8s-xL-Hc5">
-                                                <rect key="frame" x="61" y="0.0" width="166" height="30"/>
-                                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Zakończ i zobacz wyniki">
-                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjJ-nZ-nLo">
-                                                <rect key="frame" x="237" y="0.0" width="35" height="30"/>
-                                                <state key="normal" title="Dalej">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="heU-Mk-Dbb">
+                                                <rect key="frame" x="116.5" y="0.0" width="39" height="37"/>
+                                                <color key="pageIndicatorTintColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="currentPageIndicatorTintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </pageControl>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BuI-uM-gQH">
+                                                <rect key="frame" x="0.0" y="40" width="272" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcl-uo-p2q">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
+                                                        <state key="normal" title="Wstecz">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8s-xL-Hc5">
+                                                        <rect key="frame" x="61" y="0.0" width="166" height="30"/>
+                                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Zakończ i zobacz wyniki">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjJ-nZ-nLo">
+                                                        <rect key="frame" x="237" y="0.0" width="35" height="30"/>
+                                                        <state key="normal" title="Dalej">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="BuI-uM-gQH" firstAttribute="centerX" secondItem="NNc-6n-zrD" secondAttribute="centerX" id="5Yt-bI-Ndr"/>
-                                    <constraint firstItem="BuI-uM-gQH" firstAttribute="centerY" secondItem="NNc-6n-zrD" secondAttribute="centerY" id="ZZW-Za-Lwm"/>
+                                    <constraint firstItem="osY-F5-7NT" firstAttribute="centerX" secondItem="NNc-6n-zrD" secondAttribute="centerX" id="4Pr-kP-b65"/>
+                                    <constraint firstItem="osY-F5-7NT" firstAttribute="centerY" secondItem="NNc-6n-zrD" secondAttribute="centerY" id="UYr-ZW-cQx"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -81,6 +91,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZFC-Bg-jG4"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="sjJ-nZ-nLo" id="sB9-6N-d0B"/>
+                        <outlet property="pageControl" destination="heU-Mk-Dbb" id="CHJ-zK-EZJ"/>
+                        <outlet property="previousButton" destination="bcl-uo-p2q" id="3HB-tQ-wbo"/>
+                        <outlet property="stopTestButton" destination="e8s-xL-Hc5" id="r2Q-YN-tdZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ne9-Lc-zH7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,19 +111,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xhz-8p-UDr">
-                                <rect key="frame" x="0.0" y="20" width="375" height="531"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="541"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EXy-pA-gcT">
                                         <rect key="frame" x="20" y="0.0" width="335" height="231"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pytanie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAV-kD-5Sc">
-                                        <rect key="frame" x="159" y="236" width="57.5" height="140"/>
+                                        <rect key="frame" x="159" y="236" width="57.5" height="150"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t7K-0g-30o">
-                                        <rect key="frame" x="107" y="381" width="161" height="150"/>
+                                        <rect key="frame" x="107" y="391" width="161" height="150"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JXh-YY-2e8">
                                                 <rect key="frame" x="0.0" y="0.0" width="161" height="30"/>
@@ -217,7 +233,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Xhz-8p-UDr" firstAttribute="leading" secondItem="IKU-zb-94Q" secondAttribute="leading" id="mkP-UM-3qK"/>
-                            <constraint firstItem="IKU-zb-94Q" firstAttribute="bottom" secondItem="Xhz-8p-UDr" secondAttribute="bottom" id="tJ2-QB-gDi"/>
+                            <constraint firstItem="Xhz-8p-UDr" firstAttribute="bottom" secondItem="IKU-zb-94Q" secondAttribute="bottom" constant="10" id="sCh-3K-33l"/>
                             <constraint firstItem="Xhz-8p-UDr" firstAttribute="top" secondItem="IKU-zb-94Q" secondAttribute="top" id="tUq-Ih-swP"/>
                             <constraint firstItem="IKU-zb-94Q" firstAttribute="trailing" secondItem="Xhz-8p-UDr" secondAttribute="trailing" id="tZG-IG-kzg"/>
                         </constraints>

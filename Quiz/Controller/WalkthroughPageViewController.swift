@@ -20,7 +20,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
     
     var currentIndex = 0
     
-    var badAnswers = [true, false, false, false, false]
+    var badAnswers = [false, false, false, false, false]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +67,6 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
                 pageContentViewController.imageFile = pageImages[index]
                 pageContentViewController.informations = pageInformations[index]
                 pageContentViewController.index = index
-                
             }
             return pageContentViewController
         }

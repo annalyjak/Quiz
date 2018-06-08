@@ -1,32 +1,34 @@
 //
-//  WalkthroughViewController.swift
+//  QuestionsViewController.swift
 //  Quiz
 //
-//  Created by Anna on 29.05.2018.
+//  Created by Anna on 08.06.2018.
 //  Copyright © 2018 PWR. All rights reserved.
 //
 
 import UIKit
 
-class WalkthroughViewController: UIViewController {
+class QuestionsViewController: UIViewController {
 
     @IBOutlet var pageControl: UIPageControl! {
         didSet {
             pageControl.numberOfPages = 5
         }
     }
-    @IBOutlet var startTestButton: UIButton! {
+    @IBOutlet var stopTestButton: UIButton! {
         didSet {
-            startTestButton.layer.cornerRadius = 25.0
-            startTestButton.layer.masksToBounds = true
+            //stopTestButton.layer.cornerRadius = 25.0
+            //stopTestButton.layer.masksToBounds = true
         }
     }
-    @IBOutlet var previousButton: UIButton!
+    @IBOutlet var previousButton: UIButton!{
+        didSet{
+            previousButton.isHidden=true
+        }
+    }
     @IBOutlet var nextButton: UIButton!
     
-    var badAnswers = [false, false, false, false, false]
-    
-    var walkthroughPageViewController: WalkthroughPageViewController?
+    var questionsPageViewController: QuestionsPageViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,26 +43,24 @@ class WalkthroughViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination
-        if let pageViewController = destination as? WalkthroughPageViewController {
-            walkthroughPageViewController = pageViewController
-            walkthroughPageViewController?.badAnswers = badAnswers
+        if let pageViewController = destination as? QuestionsPageViewController {
+            questionsPageViewController = pageViewController
         }
     }
     
-    @IBAction func startTestButtonTapped(sender: UIButton) {
-      //  dismiss(animated: true, completion: nil)
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Question", bundle: nil)
-        if let questionsViewController = storyBoard.instantiateViewController(withIdentifier: "QuestionsViewController") as? QuestionsViewController {
-            present(questionsViewController, animated: true, completion: nil)
-            print("hsefgdyu")
+    @IBAction func stopTestButtonTapped(sender: UIButton) {
+        questionsPageViewController?.stopTest()
+        updateUI()
+        if(questionsPageViewController?.IS_TEST_MODE == false) {
+            stopTestButton.setTitle("Ucz się od nowa", for: .normal)
         }
     }
     
     @IBAction func nextButtonTapped(sender: UIButton) {
-        if let index = walkthroughPageViewController?.currentIndex {
+        if let index = questionsPageViewController?.currentIndex {
             switch index {
             case 0...3:
-                walkthroughPageViewController?.forwardPage()
+                questionsPageViewController?.forwardPage()
             case 4:
                 dismiss(animated: true, completion: nil)
             default: break
@@ -70,12 +70,12 @@ class WalkthroughViewController: UIViewController {
     }
     
     @IBAction func previousButtonTapped(sender: UIButton) {
-        if let index = walkthroughPageViewController?.currentIndex {
+        if let index = questionsPageViewController?.currentIndex {
             switch index {
             case 1...4:
-                walkthroughPageViewController?.backwardPage()
-            //case 0:
-                // do nothing
+                questionsPageViewController?.backwardPage()
+                //case 0:
+            // do nothing
             default: break
             }
         }
@@ -83,20 +83,20 @@ class WalkthroughViewController: UIViewController {
     }
     
     func updateUI() {
-        if let index = walkthroughPageViewController?.currentIndex {
+        if let index = questionsPageViewController?.currentIndex {
             switch index {
             case  0:
                 nextButton.isHidden = false
                 previousButton.isHidden = true
-                startTestButton.isHidden = true
+              //  startTestButton.isHidden = true
             case 1...3:
                 nextButton.isHidden = false
                 previousButton.isHidden = false
-                startTestButton.isHidden = true
+              //  startTestButton.isHidden = true
             case 4:
                 nextButton.isHidden = true
                 previousButton.isHidden = false
-                startTestButton.isHidden = false
+              //  startTestButton.isHidden = false
             default: break
             }
             pageControl.currentPage = index

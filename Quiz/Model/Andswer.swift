@@ -24,7 +24,7 @@ class Andswer {
     }
     
     convenience init(){
-        self.init(number: 1, isSelected: false, isCorret: false, contet: "")
+        self.init(qestionNumber: 1, number: 1, isCorret: false, isSelected: false, contet: "")
     }
     
 }
