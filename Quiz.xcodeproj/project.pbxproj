@@ -17,8 +17,6 @@
 		95E824C920BC2029007E8F76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E824C820BC2029007E8F76 /* ViewController.swift */; };
 		95E824CC20BC2029007E8F76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E824CA20BC2029007E8F76 /* Main.storyboard */; };
 		95E824CE20BC2029007E8F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95E824CD20BC2029007E8F76 /* Assets.xcassets */; };
-		95E824E020BC2E82007E8F76 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E824DF20BC2E82007E8F76 /* Information.swift */; };
-		95E824E220BC3211007E8F76 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E824E120BC3211007E8F76 /* InformationViewController.swift */; };
 		95FA7FE020BD9923002BC3CD /* Lessons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FA7FDF20BD9923002BC3CD /* Lessons.storyboard */; };
 		95FB3AFE20BDE5DA00CE4793 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FB3AFD20BDE5DA00CE4793 /* WalkthroughContentViewController.swift */; };
 		95FB3B0020BDE9E200CE4793 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FB3AFF20BDE9E200CE4793 /* WalkthroughPageViewController.swift */; };
@@ -38,8 +36,6 @@
 		95E824CB20BC2029007E8F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95E824CD20BC2029007E8F76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95E824D220BC2029007E8F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95E824DF20BC2E82007E8F76 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
-		95E824E120BC3211007E8F76 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		95FA7FDF20BD9923002BC3CD /* Lessons.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lessons.storyboard; sourceTree = "<group>"; };
 		95FB3AFD20BDE5DA00CE4793 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		95FB3AFF20BDE9E200CE4793 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +96,6 @@
 		95E824DC20BC2873007E8F76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				95E824DF20BC2E82007E8F76 /* Information.swift */,
 				95E5E8A120C899B000EE977D /* Andswer.swift */,
 				954D674D20C93E9C00E1716A /* Question.swift */,
 			);
@@ -118,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				95E824C820BC2029007E8F76 /* ViewController.swift */,
-				95E824E120BC3211007E8F76 /* InformationViewController.swift */,
 				95FB3AFD20BDE5DA00CE4793 /* WalkthroughContentViewController.swift */,
 				95FB3AFF20BDE9E200CE4793 /* WalkthroughPageViewController.swift */,
 				95FB3B0120BDEEF500CE4793 /* WalkthroughViewController.swift */,
@@ -206,12 +200,10 @@
 				95FB3B0220BDEEF500CE4793 /* WalkthroughViewController.swift in Sources */,
 				95510A2C20CAF82400BA09CB /* QuestionsViewController.swift in Sources */,
 				95E5E8A420C89ADE00EE977D /* QuestionsContentViewController.swift in Sources */,
-				95E824E020BC2E82007E8F76 /* Information.swift in Sources */,
 				95E824C920BC2029007E8F76 /* ViewController.swift in Sources */,
 				95E5E8A220C899B000EE977D /* Andswer.swift in Sources */,
 				95E824C720BC2029007E8F76 /* AppDelegate.swift in Sources */,
 				954D674C20C93BD400E1716A /* QuestionsPageViewController.swift in Sources */,
-				95E824E220BC3211007E8F76 /* InformationViewController.swift in Sources */,
 				954D674E20C93E9C00E1716A /* Question.swift in Sources */,
 				95FB3AFE20BDE5DA00CE4793 /* WalkthroughContentViewController.swift in Sources */,
 			);
