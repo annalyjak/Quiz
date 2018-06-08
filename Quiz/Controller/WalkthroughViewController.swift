@@ -17,8 +17,7 @@ class WalkthroughViewController: UIViewController {
     }
     @IBOutlet var startTestButton: UIButton! {
         didSet {
-            startTestButton.layer.cornerRadius = 25.0
-            startTestButton.layer.masksToBounds = true
+            startTestButton.isHidden = true
         }
     }
     @IBOutlet var previousButton: UIButton!

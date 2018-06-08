@@ -28,8 +28,10 @@ class Question {
     }
     
     func isCorrectAndswer() -> Bool {
-        if((first.isCorret && first.isSelected) || (second.isCorret && second.isSelected) || (third.isCorret && third.isSelected) || (fourth.isCorret && fourth.isSelected)) {
-            return true
+        if(first.isSelected || second.isSelected || third.isSelected || fourth.isSelected){
+            if((first.isCorret && first.isSelected) || (second.isCorret && second.isSelected) || (third.isCorret && third.isSelected) || (fourth.isCorret && fourth.isSelected)) {
+                return true
+            }
         }
         return false
     }

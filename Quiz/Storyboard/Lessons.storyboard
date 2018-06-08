@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -31,13 +31,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hdi-aq-5vI">
                                 <rect key="frame" x="10" y="30" width="355" height="500"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-Rl-TKh">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-Rl-TKh">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="366"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="bEQ-Rl-TKh" secondAttribute="height" multiplier="355:366" id="cTw-KP-byM"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="bEQ-Rl-TKh" secondAttribute="height" multiplier="355:366" id="cTw-KP-byM"/>
                                         </constraints>
+                                        <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fcR-Ls-Tvw">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fcR-Ls-Tvw">
                                         <rect key="frame" x="0.0" y="371" width="355" height="129"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -66,27 +67,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPG-lg-fKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493.60000000000002" y="173.61319340329837"/>
+            <point key="canvasLocation" x="400" y="171"/>
         </scene>
         <!--Walkthrough View Controller-->
         <scene sceneID="4pf-Yt-CW4">
             <objects>
                 <viewController storyboardIdentifier="WalkthroughViewController" id="wSg-OO-5Ka" customClass="WalkthroughViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t0l-fe-3Mq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGs-gM-za0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="556"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="853.5"/>
                                 <connections>
                                     <segue destination="jx8-6K-klG" kind="embed" id="Gf5-97-SPP"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bg-H7-SSF">
-                                <rect key="frame" x="0.0" y="556" width="375" height="111"/>
+                                <rect key="frame" x="0.0" y="853.5" width="768" height="170.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="llN-wh-hmI">
-                                        <rect key="frame" x="12" y="19" width="350" height="72"/>
+                                        <rect key="frame" x="208.5" y="49" width="350" height="72"/>
                                         <subviews>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CMO-cE-E19">
                                                 <rect key="frame" x="155.5" y="0.0" width="39" height="37"/>
